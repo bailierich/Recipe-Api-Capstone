@@ -1,8 +1,6 @@
 package co.grandcircus.apicapstone.model;
 
-import java.util.List;
-
-public class Nutrition {
+public class SubCategoryNutrition {
 	
 	private String label;
 	private String tag;
@@ -11,6 +9,7 @@ public class Nutrition {
 	private Boolean hasRDI;
 	private Double daily;
 	private String unit;
-	private List<SubCategoryNutrition> sub;
+	
+	
 
 }

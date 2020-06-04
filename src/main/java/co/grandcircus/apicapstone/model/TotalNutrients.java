@@ -3,6 +3,7 @@ package co.grandcircus.apicapstone.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TotalNutrients {
+	
 	@JsonProperty("ENERC_KCAL")
 	private Energy energy;
 	@JsonProperty("FAT")
