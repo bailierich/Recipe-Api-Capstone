@@ -1,4 +1,4 @@
-package co.grandcircus.apicapstone;
+package co.grandcircus.apicapstone.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
