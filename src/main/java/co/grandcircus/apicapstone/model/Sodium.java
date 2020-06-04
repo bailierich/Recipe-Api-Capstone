@@ -6,7 +6,7 @@ public class Sodium {
 	private Double quantity;
 	private String unit;
 	
-	private Sodium() {
+	public Sodium() {
 		
 	}
 	

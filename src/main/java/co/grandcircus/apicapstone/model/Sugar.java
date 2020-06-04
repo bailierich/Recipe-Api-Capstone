@@ -6,7 +6,7 @@ public class Sugar {
 	private Double quantity;
 	private String unit;
 	
-	private Sugar() {
+	public Sugar() {
 		
 	}
 	
