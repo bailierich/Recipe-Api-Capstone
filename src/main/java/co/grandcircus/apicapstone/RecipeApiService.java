@@ -21,14 +21,14 @@ public class RecipeApiService {
 	public Outermost displayRecipesWithThreeParams(String q, List<String> health, Double calories) {
 
 		String url = buildHealthParamList(health, q, appId, appKey, calories).toString();
-		Outermost response = rest.getForObject(url, Outermost.class, appId, appKey, q);
+		Outermost response = rest.getForObject(url, Outermost.class);
 		return response;
 
 	}
 
 	public URI buildHealthParamList(List<String> health, String q, String appId, String appKey, Double calories) {
 		UriComponentsBuilder b = UriComponentsBuilder
-				.fromHttpUrl("http://api.edamam.com/search?q={q}&app_id={appId}&app_key={appKey}&from=0&to=5");
+				.fromHttpUrl("http://api.edamam.com/search?q=" + q + "app_id=" +appId + "app_key=" + appKey + "from=0&to=5");
 		URI uriBuild = null;
 		
 		if (health == null && calories == null) {
