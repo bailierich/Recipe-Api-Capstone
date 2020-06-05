@@ -2,12 +2,13 @@ package co.grandcircus.apicapstone;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import co.grandcircus.apicapstone.dao.RecipeApiDao;
+//import co.grandcircus.apicapstone.dao.RecipeApiDao;
 
 @Controller
 public class RecipeController {
@@ -15,8 +16,8 @@ public class RecipeController {
 	@Autowired
 	private RecipeApiService service;
 	
-	@Autowired
-	private RecipeApiDao dao;
+//	@Autowired
+//	private RecipeApiDao dao;
 	
 	@RequestMapping("/")
 	public String displayForm() {
