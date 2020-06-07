@@ -74,7 +74,7 @@
 					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
 						<div class="card-body">
 							<select name="calories" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-								<option selected>Choose...</option>
+								<option >Choose...</option>
 								<option value="250">250</option>
 								<option value="500">500</option>
 								<option value="750">750</option>

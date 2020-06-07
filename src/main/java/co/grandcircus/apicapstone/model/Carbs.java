@@ -1,22 +1,21 @@
 package co.grandcircus.apicapstone.model;
 
-public class Protein {
-	
+public class Carbs {
 	private String label;
 	private Double quantity;
 	private String unit;
 	
-	public Protein() {
+	public Carbs() {
 		
 	}
 	
-	public Protein(String label, Double quantity, String unit) {
+	public Carbs(String label, Double quantity, String unit) {
 		super();
 		this.label = label;
 		this.quantity = quantity;
 		this.unit = unit;
 	}
-	
+
 	public String getLabel() {
 		return label;
 	}

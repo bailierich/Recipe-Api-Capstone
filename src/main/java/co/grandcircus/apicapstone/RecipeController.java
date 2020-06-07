@@ -23,15 +23,22 @@ public class RecipeController {
 	
 	@RequestMapping("/")
 	public String displayForm() {
-		
+
 		return "index";
 	}
 	
 	@RequestMapping("/recipes")
 	public String displaySearchResults(@RequestParam String q, @RequestParam (required = false) List<String> health,
-									   @RequestParam (required = false) Double calories, Model model) {
-		
-	Outermost outermost = service.displayRecipesWithThreeParams(q, health, calories);
+									   @RequestParam (required = false) String calories, Model model) {
+	Double calDouble;	
+	
+	try {
+		calDouble = Double.parseDouble(calories);
+	}catch(NullPointerException | NumberFormatException parseError) {
+		calDouble = null;
+	}
+	
+	Outermost outermost = service.displayRecipesWithThreeParams(q, health, calDouble);
 	
 	List<Result> results= outermost.getHits();
 		

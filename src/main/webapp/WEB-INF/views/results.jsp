@@ -16,32 +16,26 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">Image</th>
-      <th scope="col">Qty</th>
-      <th scope="col">Unit</th>
-      <th scope="col">Food</th>
+      <th scope="col">Yield</th>
+      <th scope="col">Title</th>
       <th scope="col">Energy</th>
       <th scope="col">Nutrients</th>
     </tr>
   </thead>
   <tbody>
+  <c:forEach var="result" items="${results}">
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td><img src="${result.recipe.image}" /></td>
+       <td>${result.recipe.yield} Servings</td>
+      <td><a href="/recipe-details?label=${result.recipe.label}"><c:out value="${result.recipe.label }"></c:out></a></td>
+      <td><c:out value="${result.recipe.totalNutrients.energy}"></c:out></td>
+      <td>
+      <p>Protein ${result.recipe.totalNutrients.protein}</p>
+      <p>Fat ${result.recipe.totalNutrients.fat}</p>
+      <p>Carbs ${result.recipe.totalNutrients.carbs}</p>
+      </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+</c:forEach>
   </tbody>
 </table>
 

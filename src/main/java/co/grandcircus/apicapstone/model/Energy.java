@@ -43,6 +43,6 @@ public class Energy {
 	
 	@Override
 	public String toString() {
-		return "Phosphorus [label=" + label + ", quantity=" + quantity + ", unit=" + unit + "]";
+		return String.format("%.2f kcal", quantity);
 	}
 }

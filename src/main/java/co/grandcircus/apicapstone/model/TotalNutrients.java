@@ -16,6 +16,8 @@ public class TotalNutrients {
 	private MonounsaturatedFat monounsaturatedFat;
 	@JsonProperty("FIBTG")
 	private Fiber fiber;
+	@JsonProperty("CHOCDF")
+	private Carbs carbs;
 	@JsonProperty("SUGAR")
 	private Sugar sugar;
 	@JsonProperty("PROCNT")
@@ -69,12 +71,14 @@ public class TotalNutrients {
 		
 	}
 	
+	
+	
 	public TotalNutrients(Energy energy, Fat fat, SaturatedFat saturatedFat, TransFat transFat,
-			MonounsaturatedFat monounsaturatedFat, Fiber fiber, Sugar sugar, Protein protein, Cholesterol cholesterol,
-			Sodium sodium, Calcium calcium, Magnesium magnesium, Potassium potassium, Iron iron, Zinc zinc,
-			Phosphorus phosphorus, VitaA vitaA, VitaC vitaC, Thiamin thiamin, Riboflavin riboflavin, Niacin niacin,
-			VitaB6 vitaB6, FolateEqual folateEqual, Folate folate, FolicAcid folicAcid, VitaB12 vitaB12, VitaD vitaD,
-			VitaE vitaE, VitaK vitaK, Water water) {
+			MonounsaturatedFat monounsaturatedFat, Fiber fiber, Carbs carbs, Sugar sugar, Protein protein,
+			Cholesterol cholesterol, Sodium sodium, Calcium calcium, Magnesium magnesium, Potassium potassium,
+			Iron iron, Zinc zinc, Phosphorus phosphorus, VitaA vitaA, VitaC vitaC, Thiamin thiamin,
+			Riboflavin riboflavin, Niacin niacin, VitaB6 vitaB6, FolateEqual folateEqual, Folate folate,
+			FolicAcid folicAcid, VitaB12 vitaB12, VitaD vitaD, VitaE vitaE, VitaK vitaK, Water water) {
 		super();
 		this.energy = energy;
 		this.fat = fat;
@@ -82,6 +86,7 @@ public class TotalNutrients {
 		this.transFat = transFat;
 		this.monounsaturatedFat = monounsaturatedFat;
 		this.fiber = fiber;
+		this.carbs = carbs;
 		this.sugar = sugar;
 		this.protein = protein;
 		this.cholesterol = cholesterol;
@@ -107,7 +112,9 @@ public class TotalNutrients {
 		this.vitaK = vitaK;
 		this.water = water;
 	}
-	
+
+
+
 	public Energy getEnergy() {
 		return energy;
 	}
@@ -348,15 +355,28 @@ public class TotalNutrients {
 		this.water = water;
 	}
 	
+	
+	public Carbs getCarbs() {
+		return carbs;
+	}
+
+
+
+	public void setCarbs(Carbs carbs) {
+		this.carbs = carbs;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "TotalNutrients [energy=" + energy + ", fat=" + fat + ", saturatedFat=" + saturatedFat + ", transFat="
-				+ transFat + ", monounsaturatedFat=" + monounsaturatedFat + ", fiber=" + fiber + ", sugar=" + sugar
-				+ ", protein=" + protein + ", cholesterol=" + cholesterol + ", sodium=" + sodium + ", calcium="
-				+ calcium + ", magnesium=" + magnesium + ", potassium=" + potassium + ", iron=" + iron + ", zinc="
-				+ zinc + ", phosphorus=" + phosphorus + ", vitaA=" + vitaA + ", vitaC=" + vitaC + ", thiamin=" + thiamin
-				+ ", riboflavin=" + riboflavin + ", niacin=" + niacin + ", vitaB6=" + vitaB6 + ", folateEqual="
-				+ folateEqual + ", folate=" + folate + ", folicAcid=" + folicAcid + ", vitaB12=" + vitaB12 + ", vitaD="
-				+ vitaD + ", vitaE=" + vitaE + ", vitaK=" + vitaK + ", water=" + water + "]";
+				+ transFat + ", monounsaturatedFat=" + monounsaturatedFat + ", fiber=" + fiber + ", carbs=" + carbs
+				+ ", sugar=" + sugar + ", protein=" + protein + ", cholesterol=" + cholesterol + ", sodium=" + sodium
+				+ ", calcium=" + calcium + ", magnesium=" + magnesium + ", potassium=" + potassium + ", iron=" + iron
+				+ ", zinc=" + zinc + ", phosphorus=" + phosphorus + ", vitaA=" + vitaA + ", vitaC=" + vitaC
+				+ ", thiamin=" + thiamin + ", riboflavin=" + riboflavin + ", niacin=" + niacin + ", vitaB6=" + vitaB6
+				+ ", folateEqual=" + folateEqual + ", folate=" + folate + ", folicAcid=" + folicAcid + ", vitaB12="
+				+ vitaB12 + ", vitaD=" + vitaD + ", vitaE=" + vitaE + ", vitaK=" + vitaK + ", water=" + water + "]";
 	}
 }
