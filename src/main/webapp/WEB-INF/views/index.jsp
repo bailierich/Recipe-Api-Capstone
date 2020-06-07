@@ -37,112 +37,7 @@
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="celery-free"> Celery-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="crustacean-free"> Crustacean--Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="dairy-free"> Dairy-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="egg-free"> Egg-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="fish-free"> Fish-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="gluten-free"> Gluten-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="keto"> Keto
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="kidney-friendly"> Kidney Friendly
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="kosher"> Kosher
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="low-potassium"> Low Potassium
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="lupine-free"> Lupine-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="mustard-free"> Mustard-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="No-oil-added"> No Oil Added
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="low-sugar"> No-Sugar
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="paleo"> Paleo
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
 								<input type="checkbox" name="health" value="peanut-free"> Peanut-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="pecatarian"> Pescatarian
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="pork-free"> Pork-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="red-meat-free"> Red Meat-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="seasame-free"> Seasame-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="shellfish-free"> Shellfish-Free
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="soy-free"> Soy-Free
 							</label>
 						</div>
 						<div class="checkbox">
@@ -163,11 +58,6 @@
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" name="health" value="vegetarian"> Vegetarian
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="wheat-free"> Wheat-Free
 							</label>
 						</div>
 					</div>
