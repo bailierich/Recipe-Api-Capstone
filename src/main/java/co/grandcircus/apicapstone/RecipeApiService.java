@@ -1,12 +1,14 @@
 package co.grandcircus.apicapstone;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
+import org.springframework.web.util.UriUtils;
 
 import co.grandcircus.apicapstone.model.Outermost;
 
@@ -26,33 +28,24 @@ public class RecipeApiService {
 
 	}
 
-	public URI buildHealthParamList(List<String> health, String q, String appId, String appKey, Double calories) {
-		UriComponentsBuilder b = UriComponentsBuilder
-				.fromHttpUrl("http://api.edamam.com/search?q=" + q + "app_id=" +appId + "app_key=" + appKey + "from=0&to=5");
-		URI uriBuild = null;
+	private URI buildHealthParamList(List<String> health, String q, String appId, String appKey, Double calories) {
+		// ?q=" + q + "&app_id=" +appId + "&app_key=" + appKey + "&from=0&to=5"
 		
-		if (health == null && calories == null) {
-			uriBuild = b.build().toUri();
-			return uriBuild;
-		} else if (calories == null) {
-			for (String string : health) {
-				b.queryParam("health", string);
-				uriBuild = b.build().toUri();
-			}
-			return uriBuild;
-		} else if (health == null) {
-			b.queryParam("calories", calories);
-			uriBuild = b.build().toUri();
-			return uriBuild;
-		} else {
-			for (String string : health) {
-				b.queryParam("health", string);
-				uriBuild = b.build().toUri();
-			}
-			b.queryParam("calories", calories);
-			uriBuild = b.build().toUri();
-			return uriBuild;
+		UriComponentsBuilder b = UriComponentsBuilder.fromHttpUrl("https://api.edamam.com/search")
+				.queryParam("app_id", appId)
+				.queryParam("app_key", appKey)
+				.queryParam("q", q)
+				.queryParam("from", 0)
+				.queryParam("to", 5);
+		
+		if (null != health) {
+			b = b.queryParam("health", UriUtils.encode(health.get(0), StandardCharsets.UTF_8));
 		}
-
+		
+		if (null != calories) {
+			b = b.queryParam("calories", calories);
+		}
+		
+		return b.build().toUri();
 	}
 }
