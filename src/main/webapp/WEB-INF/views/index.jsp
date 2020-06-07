@@ -15,7 +15,6 @@
 							</button>
 						</h2>
 					</div>
-
 					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
 						<div class="card-body">
 							<input class="form-control" name="q" type="text" required />
@@ -33,147 +32,142 @@
 					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 						<div class="card-body">
 							<div class="checkbox">	<label>
-								<input type="checkbox" name="health" value="alcohol-free">Alcohol-Free
+								<input type="checkbox" name="health" value="alcohol-free"> Alcohol-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="celery-free">Celery-Free
+								<input type="checkbox" name="health" value="celery-free"> Celery-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="crustacean-free">Crustacean--Free
+								<input type="checkbox" name="health" value="crustacean-free"> Crustacean--Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="dairy-free">Dairy-Free
+								<input type="checkbox" name="health" value="dairy-free"> Dairy-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="egg-free">Egg-Free
+								<input type="checkbox" name="health" value="egg-free"> Egg-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="fish-free">Fish-Free
+								<input type="checkbox" name="health" value="fish-free"> Fish-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="gluten-free">Gluten-Free
+								<input type="checkbox" name="health" value="gluten-free"> Gluten-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="keto">Keto
+								<input type="checkbox" name="health" value="keto"> Keto
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="kidney-friendly">Kidney Friendly
+								<input type="checkbox" name="health" value="kidney-friendly"> Kidney Friendly
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="kosher">Kosher
+								<input type="checkbox" name="health" value="kosher"> Kosher
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="low-potassium">Low Potassium
+								<input type="checkbox" name="health" value="low-potassium"> Low Potassium
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="lupine-free">Lupine-Free
+								<input type="checkbox" name="health" value="lupine-free"> Lupine-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="mustard-free">Mustard-Free
+								<input type="checkbox" name="health" value="mustard-free"> Mustard-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="No-oil-added">No Oil Added
+								<input type="checkbox" name="health" value="No-oil-added"> No Oil Added
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="low-sugar">No-Sugar
+								<input type="checkbox" name="health" value="low-sugar"> No-Sugar
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="paleo">Paleo
+								<input type="checkbox" name="health" value="paleo"> Paleo
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="peanut-free">Peanut-Free
+								<input type="checkbox" name="health" value="peanut-free"> Peanut-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="peanut-free">Peanut-Free
+								<input type="checkbox" name="health" value="pecatarian"> Pescatarian
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="pecatarian">Pescatarian
+								<input type="checkbox" name="health" value="pork-free"> Pork-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="pork-free">Pork-Free
+								<input type="checkbox" name="health" value="red-meat-free"> Red Meat-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="red-meat-free">Red Meat-Free
+								<input type="checkbox" name="health" value="seasame-free"> Seasame-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="seasame-free">Seasame-Free
+								<input type="checkbox" name="health" value="shellfish-free"> Shellfish-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="shellfish-free">Shellfish-Free
+								<input type="checkbox" name="health" value="soy-free"> Soy-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="soy-free">Soy-Free
+								<input type="checkbox" name="health" value="sugar-conscious"> Sugar-Conscious
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="sugar-conscious">Sugar-Conscious
+								<input type="checkbox" name="health" value="tree-nut-free"> Tree-Nut-Free
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="tree-nut-free">Tree-Nut-Free
+								<input type="checkbox" name="health" value="vegan"> Vegan
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="vegan">Vegan
+								<input type="checkbox" name="health" value="vegetarian"> Vegetarian
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="health" value="vegetarian">Vegetarian
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="health" value="wheat-free">Wheat-Free
+								<input type="checkbox" name="health" value="wheat-free"> Wheat-Free
 							</label>
 						</div>
 					</div>
