@@ -14,6 +14,7 @@
       				<th scope="col">Title</th>
       				<th scope="col">Energy</th>
       				<th scope="col">Nutrients</th>
+      				<th></th>
     			</tr>
   			</thead>
   			<tbody>
@@ -28,9 +29,12 @@
       					<p>Fat ${result.recipe.totalNutrients.fat}</p>
       					<p>Carbs ${result.recipe.totalNutrients.carbs}</p>
       					</td>
+      					<td><a href="/add-to-favorites?uri=${result.recipe.uri}&label=${result.recipe.label }" class="btn btn-secondary">Add To Favorites</a></td>
     				</tr>
 				</c:forEach>
   			</tbody>
 		</table>
+		<a href="/favorites" class="btn btn-secondary">Favorites</a>
+		<a href="/" class="btn btn-secondary">Search</a>
 	</jsp:body>
 </t:page>
