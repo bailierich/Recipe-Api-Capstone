@@ -1,8 +1,5 @@
 package co.grandcircus.apicapstone;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URI;
-import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
@@ -66,7 +63,7 @@ public class RecipeController {
 		System.out.println(recipe.get(0));
 		
 		
-		model.addAttribute("recipe",recipe);
+		model.addAttribute("recipes",recipe);
 		
 		return "recipe-details";
 	}

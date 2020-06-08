@@ -16,6 +16,8 @@ public class TotalDaily {
 	private MonounsaturatedFat monounsaturatedFat;
 	@JsonProperty("FIBTG")
 	private Fiber fiber;
+	@JsonProperty("CHOCDF")
+	private Carbs carbs;
 	@JsonProperty("SUGAR")
 	private Sugar sugar;
 	@JsonProperty("PROCNT")
@@ -68,11 +70,11 @@ public class TotalDaily {
 	}
 	
 	public TotalDaily(Energy energy, Fat fat, SaturatedFat saturatedFat, TransFat transFat,
-			MonounsaturatedFat monounsaturatedFat, Fiber fiber, Sugar sugar, Protein protein, Cholesterol cholesterol,
-			Sodium sodium, Calcium calcium, Magnesium magnesium, Potassium potassium, Iron iron, Zinc zinc,
-			Phosphorus phosphorus, VitaA vitaA, VitaC vitaC, Thiamin thiamin, Riboflavin riboflavin, Niacin niacin,
-			VitaB6 vitaB6, FolateEqual folateEqual, Folate folate, FolicAcid folicAcid, VitaB12 vitaB12, VitaD vitaD,
-			VitaE vitaE, VitaK vitaK) {
+			MonounsaturatedFat monounsaturatedFat, Fiber fiber, Carbs carbs, Sugar sugar, Protein protein,
+			Cholesterol cholesterol, Sodium sodium, Calcium calcium, Magnesium magnesium, Potassium potassium,
+			Iron iron, Zinc zinc, Phosphorus phosphorus, VitaA vitaA, VitaC vitaC, Thiamin thiamin,
+			Riboflavin riboflavin, Niacin niacin, VitaB6 vitaB6, FolateEqual folateEqual, Folate folate,
+			FolicAcid folicAcid, VitaB12 vitaB12, VitaD vitaD, VitaE vitaE, VitaK vitaK) {
 		super();
 		this.energy = energy;
 		this.fat = fat;
@@ -80,6 +82,7 @@ public class TotalDaily {
 		this.transFat = transFat;
 		this.monounsaturatedFat = monounsaturatedFat;
 		this.fiber = fiber;
+		this.carbs = carbs;
 		this.sugar = sugar;
 		this.protein = protein;
 		this.cholesterol = cholesterol;
@@ -104,7 +107,7 @@ public class TotalDaily {
 		this.vitaE = vitaE;
 		this.vitaK = vitaK;
 	}
-	
+
 	public Energy getEnergy() {
 		return energy;
 	}
@@ -153,6 +156,13 @@ public class TotalDaily {
 		this.fiber = fiber;
 	}
 	
+	public Carbs getCarbs() {
+		return carbs;
+	}
+
+	public void setCarbs(Carbs carbs) {
+		this.carbs = carbs;
+	}
 	public Sugar getSugar() {
 		return sugar;
 	}
