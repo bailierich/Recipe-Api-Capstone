@@ -84,6 +84,23 @@
       </div>
     </div>
   </div>
+    <div class="card">
+    <div class="card-header" id="headingFour">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+          OG Source
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+      <c:forEach var="recipe" items="${recipes}">
+      <a href="${recipe.shareAs}" class="btn btn-primary">Link to original source</a>
+      </c:forEach>
+      </div>
+    </div>
+  </div>
 </div>
 	</jsp:body>
 </t:page>
