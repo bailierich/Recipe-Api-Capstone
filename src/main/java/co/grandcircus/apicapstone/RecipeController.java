@@ -1,6 +1,8 @@
 package co.grandcircus.apicapstone;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
+import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
@@ -48,6 +50,7 @@ public class RecipeController {
 	for(Result result: results) {
 		String uri = UriUtils.encode(result.getRecipe().getUri(), StandardCharsets.UTF_8);
 		result.getRecipe().setUri(uri);
+		System.out.println(uri);
 	}
 		
 	model.addAttribute("results",results);
@@ -59,8 +62,8 @@ public class RecipeController {
 	
 	@RequestMapping("/recipe-details")
 	public String displayRecipeDetails(@RequestParam String uri, Model model) {
-	
-		List<Recipe> recipe = service.searchById(uri);
+		List<Recipe> recipe = service.searchById(UriUtils.encode(uri, StandardCharsets.UTF_8));
+		System.out.println(recipe.get(0));
 		
 		
 		model.addAttribute("recipe",recipe);

@@ -1,6 +1,7 @@
 package co.grandcircus.apicapstone;
 
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +25,7 @@ public class RecipeApiService {
 
 	public Outermost displayRecipesWithThreeParams(String q, List<String> health, Double calories) {
 
-		String url = buildHealthParamList(health, q, appId, appKey, calories).toString();
+		URI url = buildHealthParamList(health, q, appId, appKey, calories);
 		Outermost response = rest.getForObject(url, Outermost.class);
 		return response;
 
@@ -32,7 +33,8 @@ public class RecipeApiService {
 	
 	public List<Recipe> searchById(String r){
 		
-		String url = buildById(r, appId, appKey).toString();
+		URI url = buildById(appId, appKey, r);
+		System.out.println(url);
 		Recipe[] response = rest.getForObject(url, Recipe[].class);
 		List<Recipe> recipeResponse = Arrays.asList(response);
 		return recipeResponse;
@@ -41,15 +43,11 @@ public class RecipeApiService {
 	}
 	
 	private URI buildById(String appId, String appKey, String r) {
-		
-		UriComponentsBuilder b = UriComponentsBuilder.fromHttpUrl("https://api.edamam.com/search")
-				.queryParam("app_id", appId)
-				.queryParam("app_key", appKey)
-				.queryParam("r", r);
-		
-		return b.build().toUri();
-		
-		
+		try {
+			return new URI("https://api.edamam.com/search?app_id=" + appId + "&app_key=" + appKey + "&r=" + r);
+		} catch (URISyntaxException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	private URI buildHealthParamList(List<String> health, String q, String appId, String appKey, Double calories) {
