@@ -30,7 +30,7 @@ public class RecipeApiService {
 
 	}
 	
-	public List<Recipe> searchById(String appId, String appKey, String r){
+	public List<Recipe> searchById(String r){
 		
 		String url = buildById(r, appId, appKey).toString();
 		Recipe[] response = rest.getForObject(url, Recipe[].class);
