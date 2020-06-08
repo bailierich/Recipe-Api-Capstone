@@ -2,6 +2,7 @@ package co.grandcircus.apicapstone;
 
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -11,6 +12,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.web.util.UriUtils;
 
 import co.grandcircus.apicapstone.model.Outermost;
+import co.grandcircus.apicapstone.model.Recipe;
 
 @Service
 public class RecipeApiService {
@@ -27,9 +29,31 @@ public class RecipeApiService {
 		return response;
 
 	}
+	
+	public List<Recipe> searchById(String appId, String appKey, String r){
+		
+		String url = buildById(r, appId, appKey).toString();
+		Recipe[] response = rest.getForObject(url, Recipe[].class);
+		List<Recipe> recipeResponse = Arrays.asList(response);
+		return recipeResponse;
+		
+		
+	}
+	
+	private URI buildById(String appId, String appKey, String r) {
+		
+		UriComponentsBuilder b = UriComponentsBuilder.fromHttpUrl("https://api.edamam.com/search")
+				.queryParam("app_id", appId)
+				.queryParam("app_key", appKey)
+				.queryParam("r", r);
+		
+		return b.build().toUri();
+		
+		
+	}
 
 	private URI buildHealthParamList(List<String> health, String q, String appId, String appKey, Double calories) {
-		// ?q=" + q + "&app_id=" +appId + "&app_key=" + appKey + "&from=0&to=5"
+	
 		
 		UriComponentsBuilder b = UriComponentsBuilder.fromHttpUrl("https://api.edamam.com/search")
 				.queryParam("app_id", appId)

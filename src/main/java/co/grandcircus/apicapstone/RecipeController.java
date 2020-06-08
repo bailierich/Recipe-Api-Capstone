@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import co.grandcircus.apicapstone.dao.RecipeApiDao;
 import co.grandcircus.apicapstone.model.Outermost;
+import co.grandcircus.apicapstone.model.Recipe;
 import co.grandcircus.apicapstone.model.Result;
 
 @Controller
@@ -50,7 +51,8 @@ public class RecipeController {
 	}
 	
 	@RequestMapping("/recipe-details")
-	public String displayRecipeDetails() {
+	public String displayRecipeDetails(@RequestParam String uri, Model model) {
+	
 		
 		
 		

@@ -27,7 +27,7 @@
     <tr>
       <td><img src="${result.recipe.image}" /></td>
        <td>${result.recipe.yield} Servings</td>
-      <td><a href="/recipe-details?label=${result.recipe.label}"><c:out value="${result.recipe.label }"></c:out></a></td>
+      <td><a href="/recipe-details?uri=${result.recipe.uri}"><c:out value="${result.recipe.label }"></c:out></a></td>
       <td><c:out value="${result.recipe.totalNutrients.energy}"></c:out></td>
       <td>
       <p>Protein ${result.recipe.totalNutrients.protein}</p>
